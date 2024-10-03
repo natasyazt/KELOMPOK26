@@ -1,19 +1,15 @@
-# Daftar belanja akan disimpan di sini
 daftar_belanja = []
 
-# Function dengan return type dan tanpa parameter
 def lihat_daftar_belanja():
     if len(daftar_belanja) == 0:
         return "Daftar belanja kosong."
     else:
         return "\n".join(daftar_belanja)
 
-# Function tanpa return type dan berparameter
 def tambah_item(item):
     daftar_belanja.append(item)
     print(f"Item '{item}' berhasil ditambahkan ke daftar belanja.")
 
-# Method (sebagai bagian dari class) tanpa return type
 class DaftarBelanja:
     def hapus_item(self, item):
         if item in daftar_belanja:
@@ -22,11 +18,9 @@ class DaftarBelanja:
         else:
             print(f"Item '{item}' tidak ditemukan di daftar belanja.")
     
-    # Method dengan return type
     def total_item(self):
         return len(daftar_belanja)
 
-# Program utama
 def main():
     daftar = DaftarBelanja()
     
@@ -62,6 +56,5 @@ def main():
         else:
             print("Opsi tidak valid, coba lagi.")
 
-# Menjalankan program utama
 if __name__ == "__main__":
     main()
